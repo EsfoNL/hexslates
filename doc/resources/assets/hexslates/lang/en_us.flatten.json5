@@ -1,0 +1,8 @@
+{
+  hexdoc: {
+    hexslates: {
+      title: "HexSlates Book",
+      description: "HexSlates addon for Hex Casting",
+    },
+  }
+}

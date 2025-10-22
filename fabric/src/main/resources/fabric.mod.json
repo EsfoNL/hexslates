@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "hexslates",
+  "version": "${version}",
+  "name": "HexSlates",
+  "description": "HexSlates addon for Hex Casting",
+  "authors": [
+    "EsfoNL"
+  ],
+  "contact": {
+    "homepage": "https://esfonl.github.io/hexslates",
+    "sources": "https://github.com/EsfoNL/hexslates"
+  },
+  "license": "MIT",
+  "icon": "assets/hexslates/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "nl.esfokk.hexslates.fabric.FabricHexslates"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "nl.esfokk.hexslates.fabric.FabricHexslatesClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "nl.esfokk.hexslates.fabric.FabricHexslatesServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "nl.esfokk.hexslates.fabric.datagen.FabricHexslatesDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "nl.esfokk.hexslates.fabric.FabricHexslatesModMenu"
+    }]
+  },
+  "mixins": [
+    "hexslates-common.mixins.json",
+    "hexslates-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting_dependency}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}
